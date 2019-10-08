@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.mapper.IAdminMapper">
+    <resultMap id="BaseResultMap" type="com.tourism.entity.Admin">
+        <!--@mbg.generated-->
+        <!--@Table admin-->
+        <id column="a_id" jdbcType="INTEGER" property="aId"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="last_login" jdbcType="VARCHAR" property="lastLogin"/>
+        <result column="is_delete" jdbcType="VARCHAR" property="isDelete"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        a_id, username, nickname, `password`, last_login, is_delete
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from admin
+        where a_id = #{aId,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        <!--@mbg.generated-->
+        delete from admin
+        where a_id = #{aId,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" keyColumn="a_id" keyProperty="aId" parameterType="com.tourism.entity.Admin"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into admin (username, nickname, `password`,
+        last_login, is_delete)
+        values (#{username,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+        #{lastLogin,jdbcType=VARCHAR}, #{isDelete,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" keyColumn="a_id" keyProperty="aId" parameterType="com.tourism.entity.Admin"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into admin
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="username != null">
+                username,
+            </if>
+            <if test="nickname != null">
+                nickname,
+            </if>
+            <if test="password != null">
+                `password`,
+            </if>
+            <if test="lastLogin != null">
+                last_login,
+            </if>
+            <if test="isDelete != null">
+                is_delete,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="username != null">
+                #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="nickname != null">
+                #{nickname,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="lastLogin != null">
+                #{lastLogin,jdbcType=VARCHAR},
+            </if>
+            <if test="isDelete != null">
+                #{isDelete,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.tourism.entity.Admin">
+        <!--@mbg.generated-->
+        update admin
+        <set>
+            <if test="username != null">
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="nickname != null">
+                nickname = #{nickname,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                `password` = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="lastLogin != null">
+                last_login = #{lastLogin,jdbcType=VARCHAR},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where a_id = #{aId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.tourism.entity.Admin">
+        <!--@mbg.generated-->
+        update admin
+        set username = #{username,jdbcType=VARCHAR},
+        nickname = #{nickname,jdbcType=VARCHAR},
+        `password` = #{password,jdbcType=VARCHAR},
+        last_login = #{lastLogin,jdbcType=VARCHAR},
+        is_delete = #{isDelete,jdbcType=VARCHAR}
+        where a_id = #{aId,jdbcType=INTEGER}
+    </update>
+
+    <select id="findByUP" parameterType="com.tourism.entity.Admin" resultType="int">
+    select
+    count(*)
+    from admin
+    WHERE username=#{param1,jdbcType=VARCHAR} and password=#{param2,jdbcType=VARCHAR}
+  </select>
+
+    <select id="idByName" parameterType="com.tourism.entity.Admin" resultType="int">
+    select
+    a_id
+    from admin
+    WHERE username=#{username}
+  </select>
+</mapper>

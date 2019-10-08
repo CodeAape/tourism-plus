@@ -1,0 +1,38 @@
+[
+  {
+    "adminId": "1",
+    "nickName": "超人一号",
+    "adminName": "admin",
+    "lastLogin": "2019-09-30 10:30"
+  },
+  {
+    "adminId": "1",
+    "nickName": "超人二号",
+    "adminName": "wangzikeng",
+    "lastLogin": "2019-09-30 10:30"
+  },
+  {
+    "adminId": "1",
+    "nickName": "超人三号",
+    "adminName": "huangyunhou",
+    "lastLogin": "2019-09-30 10:30"
+  },
+  {
+    "adminId": "1",
+    "nickName": "超人四号",
+    "adminName": "huanglibing",
+    "lastLogin": "2019-09-30 10:30"
+  },
+  {
+    "adminId": "1",
+    "nickName": "超人五号",
+    "adminName": "helei",
+    "lastLogin": "2019-09-30 10:30"
+  },
+  {
+    "adminId": "1",
+    "nickName": "超人一号",
+    "adminName": "jiazhanbo",
+    "lastLogin": "2019-09-30 10:30"
+  }
+]

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>请先登录</title>
+    <link href="../static/public/css/default.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible"/>
+    <meta content="telephone=no" name="format-detection">
+    <meta content="webkit" name="renderer">
+    <meta content="www.php.cn" name="author"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="no-siteapp" http-equiv="Cache-Control"/>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    <link href="../static/public/css/default.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Theme style  -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .iw_poi_title {
+            color: #CC5522;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            padding-right: 13px;
+            white-space: nowrap
+        }
+
+        .iw_poi_content {
+            font: 12px arial, sans-serif;
+            overflow: visible;
+            padding-top: 4px;
+            white-space: -moz-pre-wrap;
+            word-wrap: break-word
+        }
+
+    </style>
+    <script src="http://api.map.baidu.com/api?key=&v=1.1&services=true" type="text/javascript"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="header-nav">
+        <div role="navigation">
+            <a class="hd-logo" href="#" rel="home" title="此游网"><img height="100" src="../static/public/images/logo2.png"
+                                                                    width="300"></a>
+            <ul class="hd-nav">
+                <li class="search-box-li">
+                    <i class="search-exit"></i></li>
+                <li><a href="index.html" name="index">网站首页<span><i class="iconfont ">&#xe6aa;</i></span></a></li>
+                <li><a href="productlist.html" name="productlist">服务套餐<span><i class="iconfont ">&#xe6aa;</i></span></a>
+                </li>
+                <li><a href="article.html" name="article">旅行资讯<span><i class="iconfont ">&#xe6aa;</i></span></a></li>
+                <li><a href="user.html" name="contact">用户中心<span><i class="iconfont ">&#xe6aa;</i></span></a></li>
+                <li><a href="about.html" name="about">关于我们<span><i class="iconfont ">&#xe6aa;</i></span></a></li>
+            </ul>
+
+            <div class="motai"></div>
+            <ul>
+                <li><a>广州站</a></li>
+                <li><a>Guangzhou</a></li>
+                <li><a><i class="iconfont nav-bottom">&#xe61f;</i></a></li>
+            </ul>
+
+        </div>
+    </div>
+</header>
+<header class="gtco-cover" id="gtco-header" role="banner"
+        style="background-image: url(../static/public/images/bg2.jpg);margin-top: 130px;">
+    <div class="overlay"></div>
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-left">
+
+
+                <div class="row row-mt-15em">
+                    <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+                        <span class="intro-text-small">欢迎您选择此游网</span>
+                        <h1>ComehereTourism<br/>此游.走到哪里都有家</h1>
+                    </div>
+                    <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+                        <div class="form-wrap">
+                            <div class="tab">
+                                <ul class="tab-menu">
+                                    <li class="active gtco-first"><a data-tab="signup" href="#">注册用户</a></li>
+                                    <li class="gtco-second"><a data-tab="login" href="#">登录</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-content-inner active" data-content="signup">
+                                        <form action="#">
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="username">用户名</label>
+                                                    <input class="form-control" id="username" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="password">密码</label>
+                                                    <input class="form-control" id="password" type="password">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="password2">确认密码</label>
+                                                    <input class="form-control" id="rpassword" type="password">
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <input class="btn btn-primary" type="submit" value="注册">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="tab-content-inner" data-content="login">
+                                        <form action="#">
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="username">用户名</label>
+                                                    <input class="form-control" id="username" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="password">密码</label>
+                                                    <input class="form-control" id="password" type="password">
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <input class="btn btn-primary" type="submit" value="登录">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<footer>
+    <div>
+        <ul class="footer-top">
+            <li><a href="index.html">网站首页</a></li>
+            <li><a href="productlist.html">服务套餐</a></li>
+            <li><a href="article.html">旅行资讯</a></li>
+            <li><a href="user.html">用户中心</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+    </div>
+    <div>
+        <ul class="footer-body">
+            <li>
+                <span>电话:</span><span>400-88888888</span>
+            </li>
+            <li>
+                <span>邮箱:</span><span>chtourism@foxmail.com</span>
+            </li>
+            <li>
+                <span>地址:</span><span>广州市天河区</span>
+            </li>
+        </ul>
+        <div style="height: 32px"><span style="color:#dedede">COMR HERE TOURISM - Copyright © 2019
+            <a href="#" target="_blank" title="CHTourism">CHTourism此游网</a> 版权所有</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
+</body>
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap() {
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+
+    //创建地图函数：
+    function createMap() {
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(113.357791, 23.138497);//定义一个中心点坐标
+        map.centerAndZoom(point, 18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent() {
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl() {
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(ctrl_nav);
+
+    }
+
+    //标注点数组
+    var markerArr = [{
+        title: "广州市天河区",
+        content: "我的备注",
+        point: "113.357791|23.138497",
+        isOpen: 0,
+        icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
+    }
+    ];
+
+    //创建marker
+    function addMarker() {
+        for (var i = 0; i < markerArr.length; i++) {
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0, p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point, {icon: iconImg});
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title, {"offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)});
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                borderColor: "#808080",
+                color: "#333",
+                cursor: "pointer"
+            });
+
+            (function () {
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click", function () {
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open", function () {
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close", function () {
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click", function () {
+                    _marker.openInfoWindow(_iw);
+                })
+                if (!!json.isOpen) {
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+
+    //创建InfoWindow
+    function createInfoWindow(i) {
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+        return iw;
+    }
+
+    //创建一个Icon
+    function createIcon(json) {
+        var icon = new BMap.Icon("../../../static/public/images/position.png", new BMap.Size(json.w, json.h), {
+            imageOffset: new BMap.Size(-json.l, -json.t),
+            infoWindowOffset: new BMap.Size(json.lb + 5, 1),
+            offset: new BMap.Size(json.x, json.h)
+        })
+        return icon;
+    }
+
+    initMap();//创建和初始化地图
+</script>
+
+<script src="../static/public/plugins/jquery/jquery.js"></script>
+<script src="../static/public/plugins/bootstrap/js/bootstrap.js"></script>
+<script src="../static/public/js/main.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- countTo -->
+<script src="js/jquery.countTo.js"></script>
+<!-- Magnific Popup -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- Main -->
+<script src="js/main.js"></script>
+
+</html>

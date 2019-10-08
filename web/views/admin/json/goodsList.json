@@ -1,0 +1,17 @@
+[
+  {
+    "goodsId": "1",
+    "title": "海南三亚亲子游",
+    "pic": "654846jlajsf.jpg",
+    "name": "海南三亚套餐",
+    "goodNum": "2份",
+    "address": "广州天河区",
+    "goAddress": "海南三亚",
+    "price": "50000",
+    "newPrice": "39999",
+    "describe": "专车接送，无需打车，酒店住宿，汽车租出服务，旅行工具出租等",
+    "longTime": "3天",
+    "date": "2019-09-30",
+    "isDelete": "1"
+  }
+]

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>关于我们</title>
+    <link href="../static/public/css/default.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible"/>
+    <meta content="telephone=no" name="format-detection">
+    <meta content="webkit" name="renderer">
+    <meta content="www.php.cn" name="author"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="no-siteapp" http-equiv="Cache-Control"/>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    <link href="../static/public/css/default.css" rel="stylesheet">
+
+
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .iw_poi_title {
+            color: #CC5522;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            padding-right: 13px;
+            white-space: nowrap
+        }
+
+        .iw_poi_content {
+            font: 12px arial, sans-serif;
+            overflow: visible;
+            padding-top: 4px;
+            white-space: -moz-pre-wrap;
+            word-wrap: break-word
+        }
+
+    </style>
+    <script src="http://api.map.baidu.com/api?key=&v=1.1&services=true" type="text/javascript"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="header-nav">
+        <div role="navigation">
+            <a class="hd-logo" href="#" rel="home" title="此游网"><img height="100" src="../static/public/images/logo2.png"
+                                                                    width="300"></a>
+            <ul class="hd-nav">
+                <li class="search-box-li">
+                    <i class="search-exit"></i></li>
+                <li><a href="index.html" name="index">网站首页<span><i class="iconfont ">&#xe6aa;</i></span></a></li>
+                <li><a href="productlist.html" name="productlist">服务套餐<span><i class="iconfont ">&#xe6aa;</i></span></a>
+                </li>
+                <li><a href="article.html" name="article">旅行资讯<span><i class="iconfont ">&#xe6aa;</i></span></a></li>
+                <li><a href="user.html" name="contact">用户中心<span><i class="iconfont ">&#xe6aa;</i></span></a></li>
+                <li><a href="about.html" name="about">关于我们<span><i class="iconfont ">&#xe6aa;</i></span></a></li>
+            </ul>
+
+            <div class="motai"></div>
+            <ul>
+                <li><a>广州站</a></li>
+                <li><a>Guangzhou</a></li>
+                <li><a><i class="iconfont nav-bottom">&#xe61f;</i></a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="header-carousel container">
+
+        <div class="carousel slide" id="myCarousel">
+            <img alt="" src="../static/public/images/mdbanner2.jpg" width="100%">
+        </div>
+
+    </div>
+</header>
+
+<main>
+    <div class="main-head">
+        <p><span>关于我们</span></p>
+    </div>
+</main>
+<div class="main-all-width">
+    <div class="main-about-body">
+        <div><img src=""></div>
+        <div><img src=""></div>
+    </div>
+    <div class="main-about-footer">
+        <p class="chinese">公司简介</p>
+        <p class="english">ompany</p>
+    </div>
+</div>
+
+<main>
+    <div class="main-head">
+        <p><span>我们提供</span></p>
+    </div>
+    <div class="main-we-provide">
+        <ul>
+            <li><span><img alt="" src="../static/public/images/lunch.png"></span>
+                <h2>景点酒店</h2>
+                <p>全国著名景区都有驻扎点，有专属的住宿服务</p></li>
+            <li><span><img alt="" src="../static/public/images/dinner.png"></span>
+                <h2>多人旅行</h2>
+                <p>我们为团队旅行提供了多种出行方案，工具出租，载具出租，大巴接送等</p></li>
+            <li><span><img alt="" src="../static/public/images/coffee.png"></span>
+                <h2>美食服务</h2>
+                <p>在各个驻扎点都有本地的特色美食，在旅行中提供一日三餐美食服务</p></li>
+        </ul>
+    </div>
+</main>
+
+
+<main>
+    <!--展示后台管理员-->
+    <div class="main-head">
+        <p><span>团队成员</span></p>
+    </div>
+    <div class="main-team">
+        <ul>
+            <li><span><img alt="" src=""></span>
+                <h2>HOUG</h2>
+                <h3>No1</h3>
+                <p>WEB</p></li>
+            <li class="main-team-display">
+                <span><img alt="" src=""></span>
+                <h2>BoBoyuanyuan</h2>
+                <h3>No2</h3>
+                <p>ADMIN</p></li>
+            <li><span><img alt="" src=""></span>
+                <h2>LinZi-Y</h2>
+                <h3>No3</h3>
+                <p>All</p></li>
+            <li><span><img alt="" src=""></span>
+                <h2>LinZi-Y</h2>
+                <h3>No4</h3>
+                <p>All</p></li>
+            <li><span><img alt="" src=""></span>
+                <h2>LinZi-Y</h2>
+                <h3>No5</h3>
+                <p>All</p></li>
+        </ul>
+        <span class="prevbtn"></span>
+        <span class="nextbtn"></span>
+    </div>
+</main>
+
+
+<main>
+    <div class="main-head">
+        <p><span>联系我们</span></p>
+    </div>
+</main>
+
+<div class="main-all-width">
+    <div class="main-about-body main-padding">
+        <div class="main-about-map">
+            <div id="dituContent" style="border:#ccc solid 1px;"></div>
+        </div>
+        <div class="main-about-info-right">
+            <ul class="main-about-info">
+                <li><span></span>
+                    <p>广州市天河区元岗街道</p></li>
+                <li><span></span>
+                    <p>400-888888888</p></li>
+                <li><span></span>
+                    <div class="date-box">
+                        <div class="main-about-datetime">
+                            <div class="main-about-date">周一至周五</div>
+                            <div class="main-about-time">
+                                <div>中午11:00-12:00</div>
+                                <div>下午17:00-22:00</div>
+                            </div>
+                        </div>
+                        <div class="main-about-datetime">
+                            <div class="main-about-date">周一至周五</div>
+                            <div class="main-about-time">
+                                <div>中午11:00-12:00</div>
+                                <div>下午17:00-22:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div>
+        <ul class="footer-top">
+            <li><a href="index.html">网站首页</a></li>
+            <li><a href="productlist.html">服务套餐</a></li>
+            <li><a href="article.html">旅行资讯</a></li>
+            <li><a href="user.html">用户中心</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+    </div>
+    <div>
+        <ul class="footer-body">
+            <li>
+                <span>电话:</span><span>400-88888888</span>
+            </li>
+            <li>
+                <span>邮箱:</span><span>chtourism@foxmail.com</span>
+            </li>
+            <li>
+                <span>地址:</span><span>广州市天河区</span>
+            </li>
+        </ul>
+        <div style="height: 32px"><span style="color:#dedede">COMR HERE TOURISM - Copyright © 2019
+            <a href="#" target="_blank" title="CHTourism">CHTourism此游网</a> 版权所有</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
+</body>
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap() {
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+
+    //创建地图函数：
+    function createMap() {
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(113.357791, 23.138497);//定义一个中心点坐标
+        map.centerAndZoom(point, 18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent() {
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl() {
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(ctrl_nav);
+
+    }
+
+    //标注点数组
+    var markerArr = [{
+        title: "广州市天河区",
+        content: "我的备注",
+        point: "113.357791|23.138497",
+        isOpen: 0,
+        icon: {w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5}
+    }
+    ];
+
+    //创建marker
+    function addMarker() {
+        for (var i = 0; i < markerArr.length; i++) {
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0, p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point, {icon: iconImg});
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title, {"offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)});
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                borderColor: "#808080",
+                color: "#333",
+                cursor: "pointer"
+            });
+
+            (function () {
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click", function () {
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open", function () {
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close", function () {
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click", function () {
+                    _marker.openInfoWindow(_iw);
+                })
+                if (!!json.isOpen) {
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+
+    //创建InfoWindow
+    function createInfoWindow(i) {
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+        return iw;
+    }
+
+    //创建一个Icon
+    function createIcon(json) {
+        var icon = new BMap.Icon("../../../static/public/images/position.png", new BMap.Size(json.w, json.h), {
+            imageOffset: new BMap.Size(-json.l, -json.t),
+            infoWindowOffset: new BMap.Size(json.lb + 5, 1),
+            offset: new BMap.Size(json.x, json.h)
+        })
+        return icon;
+    }
+
+    initMap();//创建和初始化地图
+</script>
+
+<script src="../static/public/plugins/jquery/jquery.js"></script>
+<script src="../static/public/plugins/bootstrap/js/bootstrap.js"></script>
+<script src="../static/public/js/main.js"></script>
+</html>

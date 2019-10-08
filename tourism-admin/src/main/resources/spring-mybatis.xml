@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--加载properties-->
+    <context:property-placeholder location="classpath:*.properties"/>
+
+
+    <!--配置连接池-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+        <property name="initialSize" value="${db.initialSize}"/>
+        <property name="maxActive" value="${db.maxActive}"/>
+    </bean>
+
+    <!--配置SqlSessionFactory工厂-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+
+    <!--配置接口所在包-->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.tourism.mapper"/>
+    </bean>
+
+
+    <!--配置spring框架声明式事务管理-->
+    <!--配置事务管理器-->
+    <!--  <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+          <property name="dataSource" ref="dataSource"/>
+      </bean>
+      &lt;!&ndash;配置事务通知&ndash;&gt;
+      <tx:advice id="txAdvice" transaction-manager="transactionManager">
+          <tx:attributes>
+              &lt;!&ndash;以find开头的方法  只读&ndash;&gt;
+              <tx:method name="find*" read-only="true"/>
+              &lt;!&ndash;除了上面的方法 &ndash;&gt;
+              <tx:method name="*" isolation="DEFAULT"/>
+          </tx:attributes>
+      </tx:advice>
+      &lt;!&ndash;配置AOP增强&ndash;&gt;
+      <aop:config>
+          <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.tourismurism.service.impl.*ServiceImpl.*(..))"/>
+      </aop:config>-->
+</beans>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.mapper.ICategoryMapper">
+    <resultMap id="BaseResultMap" type="com.tourism.entity.Category">
+        <!--@mbg.generated-->
+        <!--@Table category-->
+        <id column="cat_id" jdbcType="INTEGER" property="catId"/>
+        <result column="cat_name" jdbcType="VARCHAR" property="catName"/>
+        <result column="date" jdbcType="TIMESTAMP" property="date"/>
+        <result column="about" jdbcType="VARCHAR" property="about"/>
+        <result column="goods_id" jdbcType="INTEGER" property="goodsId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        cat_id, cat_name, `date`, about, goods_id
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from category
+        where cat_id = #{catId,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        <!--@mbg.generated-->
+        delete from category
+        where cat_id = #{catId,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" keyColumn="cat_id" keyProperty="catId" parameterType="com.tourism.entity.Category"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into category (cat_name, `date`, about,
+        goods_id)
+        values (#{catName,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP}, #{about,jdbcType=VARCHAR},
+        #{goodsId,jdbcType=INTEGER})
+    </insert>
+    <insert id="insertSelective" keyColumn="cat_id" keyProperty="catId" parameterType="com.tourism.entity.Category"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into category
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="catName != null">
+                cat_name,
+            </if>
+            <if test="date != null">
+                `date`,
+            </if>
+            <if test="about != null">
+                about,
+            </if>
+            <if test="goodsId != null">
+                goods_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="catName != null">
+                #{catName,jdbcType=VARCHAR},
+            </if>
+            <if test="date != null">
+                #{date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="about != null">
+                #{about,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsId != null">
+                #{goodsId,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.tourism.entity.Category">
+        <!--@mbg.generated-->
+        update category
+        <set>
+            <if test="catName != null">
+                cat_name = #{catName,jdbcType=VARCHAR},
+            </if>
+            <if test="date != null">
+                `date` = #{date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="about != null">
+                about = #{about,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsId != null">
+                goods_id = #{goodsId,jdbcType=INTEGER},
+            </if>
+        </set>
+        where cat_id = #{catId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.tourism.entity.Category">
+        <!--@mbg.generated-->
+        update category
+        set cat_name = #{catName,jdbcType=VARCHAR},
+        `date` = #{date,jdbcType=TIMESTAMP},
+        about = #{about,jdbcType=VARCHAR},
+        goods_id = #{goodsId,jdbcType=INTEGER}
+        where cat_id = #{catId,jdbcType=INTEGER}
+    </update>
+</mapper>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.mapper.IGoodsMapper">
+    <resultMap id="BaseResultMap" type="com.tourism.entity.Goods">
+        <!--@mbg.generated-->
+        <!--@Table goods-->
+        <id column="g_id" jdbcType="INTEGER" property="gId"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="pic" jdbcType="VARCHAR" property="pic"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="go_address" jdbcType="VARCHAR" property="goAddress"/>
+        <result column="price" jdbcType="DECIMAL" property="price"/>
+        <result column="goods_num" jdbcType="INTEGER" property="goodsNum"/>
+        <result column="new_price" jdbcType="VARCHAR" property="newPrice"/>
+        <result column="describe" jdbcType="VARCHAR" property="describe"/>
+        <result column="long_time" jdbcType="VARCHAR" property="longTime"/>
+        <result column="date" jdbcType="TIMESTAMP" property="date"/>
+        <result column="is_delete" jdbcType="INTEGER" property="isDelete"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        g_id, title, pic, `name`, address, go_address, price, goods_num, new_price, `describe`,
+        long_time, `date`, is_delete
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from goods
+        where g_id = #{gId,jdbcType=INTEGER}
+    </select>
+
+    <select id="goodsNum" resultType="int">
+    select
+    count(*)
+    from
+    goods
+  </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        <!--@mbg.generated-->
+        delete from goods
+        where g_id = #{gId,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" keyColumn="g_id" keyProperty="gId" parameterType="com.tourism.entity.Goods"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into goods (title, pic, `name`,
+        address, go_address, price,
+        goods_num, new_price, `describe`,
+        long_time, `date`, is_delete
+        )
+        values (#{title,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+        #{address,jdbcType=VARCHAR}, #{goAddress,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL},
+        #{goodsNum,jdbcType=INTEGER}, #{newPrice,jdbcType=VARCHAR}, #{describe,jdbcType=VARCHAR},
+        #{longTime,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=INTEGER}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="g_id" keyProperty="gId" parameterType="com.tourism.entity.Goods"
+            useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into goods
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="title != null">
+                title,
+            </if>
+            <if test="pic != null">
+                pic,
+            </if>
+            <if test="name != null">
+                `name`,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+            <if test="goAddress != null">
+                go_address,
+            </if>
+            <if test="price != null">
+                price,
+            </if>
+            <if test="goodsNum != null">
+                goods_num,
+            </if>
+            <if test="newPrice != null">
+                new_price,
+            </if>
+            <if test="describe != null">
+                `describe`,
+            </if>
+            <if test="longTime != null">
+                long_time,
+            </if>
+            <if test="date != null">
+                `date`,
+            </if>
+            <if test="isDelete != null">
+                is_delete,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="pic != null">
+                #{pic,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="goAddress != null">
+                #{goAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="price != null">
+                #{price,jdbcType=DECIMAL},
+            </if>
+            <if test="goodsNum != null">
+                #{goodsNum,jdbcType=INTEGER},
+            </if>
+            <if test="newPrice != null">
+                #{newPrice,jdbcType=VARCHAR},
+            </if>
+            <if test="describe != null">
+                #{describe,jdbcType=VARCHAR},
+            </if>
+            <if test="longTime != null">
+                #{longTime,jdbcType=VARCHAR},
+            </if>
+            <if test="date != null">
+                #{date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDelete != null">
+                #{isDelete,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.tourism.entity.Goods">
+        <!--@mbg.generated-->
+        update goods
+        <set>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="pic != null">
+                pic = #{pic,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                `name` = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="goAddress != null">
+                go_address = #{goAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="price != null">
+                price = #{price,jdbcType=DECIMAL},
+            </if>
+            <if test="goodsNum != null">
+                goods_num = #{goodsNum,jdbcType=INTEGER},
+            </if>
+            <if test="newPrice != null">
+                new_price = #{newPrice,jdbcType=VARCHAR},
+            </if>
+            <if test="describe != null">
+                `describe` = #{describe,jdbcType=VARCHAR},
+            </if>
+            <if test="longTime != null">
+                long_time = #{longTime,jdbcType=VARCHAR},
+            </if>
+            <if test="date != null">
+                `date` = #{date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete,jdbcType=INTEGER},
+            </if>
+        </set>
+        where g_id = #{gId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.tourism.entity.Goods">
+        <!--@mbg.generated-->
+        update goods
+        set title = #{title,jdbcType=VARCHAR},
+        pic = #{pic,jdbcType=VARCHAR},
+        `name` = #{name,jdbcType=VARCHAR},
+        address = #{address,jdbcType=VARCHAR},
+        go_address = #{goAddress,jdbcType=VARCHAR},
+        price = #{price,jdbcType=DECIMAL},
+        goods_num = #{goodsNum,jdbcType=INTEGER},
+        new_price = #{newPrice,jdbcType=VARCHAR},
+        `describe` = #{describe,jdbcType=VARCHAR},
+        long_time = #{longTime,jdbcType=VARCHAR},
+        `date` = #{date,jdbcType=TIMESTAMP},
+        is_delete = #{isDelete,jdbcType=INTEGER}
+        where g_id = #{gId,jdbcType=INTEGER}
+    </update>
+</mapper>

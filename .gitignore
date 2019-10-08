@@ -1,0 +1,3 @@
+# Project exclude paths
+/tourism-admin/target/
+/tourism-user-api/target/

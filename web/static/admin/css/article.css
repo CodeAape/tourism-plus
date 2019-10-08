@@ -1,0 +1,24 @@
+.article_search {
+    padding: 10px 10px;
+}
+
+.article_search .layui-inline {
+    margin: 5px 5px 5px 0;
+}
+
+.layui-table, .layui-table th {
+    text-align: center;
+}
+
+.article_list .layui-btn, .article_list .layui-btn + .layui-btn {
+    margin: 2px 5px;
+}
+
+.article_list .layui-form-switch {
+    margin-top: 0;
+}
+
+/*分页*/
+#page {
+    text-align: right;
+}
